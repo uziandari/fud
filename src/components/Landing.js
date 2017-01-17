@@ -1,40 +1,46 @@
 import React, {Component} from 'react';
 
-class Landing extends Component{
-  
+import bg1 from '../assets/images/bg1.jpg';
+import bg2 from '../assets/images/bg2.jpg';
+import '../assets/css/Landing.css';
+
+class Landing extends Component {
+
   /* Set up state for landing page to cycle through images */
   constructor(props) {
-      super(props);
-      this.state = {
-        /*next image background*/
-        backgroundImage: 1
-      };
-    }
+    super(props);
+    this.state = {
+      /*next image background*/
+      backgroundImage: bg1
+    };
+  }
 
   componentDidMount() {
-    this.setTimeout( () => {
+    setTimeout( () => {
        this.setTimePassed();
-    }, 1000);
+    }, 3200);
   }
 
   setTimePassed() {
-    this.setState({backgroundImage: newbackgroundImage})    
+    this.setState(
+      {
+        backgroundImage: bg2
+      }
+    )
   }
-  
+
   render() {
 
-    var newbackgroundImage = (this.state.backgroundImage === 3) ? 1 : this.state.backgroundImage + 1;
-
-    var imgUrl = '../assets/images/bg' + this.state.backgroundImage + '.jpg';
     var divStyle = {
-      backgroundImage: 'url(' + imgUrl + ')'
+      background: 'url(' + this.state.backgroundImage + ')',
+      backgroundSize: "cover",
+      bakcgroundRepeat: "no-repeat"
     };
 
     return(
       <div style={divStyle} className="bg-wrapper">
-        <h1>Today I Feel Like: </h1>
       </div>
-    )
+    );
   }
-
-export default Landing;S
+}
+export default Landing;
