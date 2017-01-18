@@ -1,16 +1,31 @@
 import React, {Component} from 'react';
 
-import bg1 from '../assets/images/bg1.jpg';
-import bg2 from '../assets/images/bg2.jpg';
+import { Button, Jumbotron } from 'react-bootstrap'
+//import bg1 from '../assets/images/bg1.jpg';
+//import bg2 from '../assets/images/bg2.jpg';
 import '../assets/css/Landing.css';
 
 class Landing extends Component {
 
-  /* Set up state for landing page to cycle through images */
+  render() {
+    return (
+      <Jumbotron>
+        <h1>FudGods</h1>
+        <p>Pray to the gods of burgers and fries.</p>
+        <p><Button bsStyle="primary">Pray!</Button></p>
+      </Jumbotron>
+    );
+  }
+}
+
+export default Landing;
+
+
+  /* Set up state for landing page to cycle through images
   constructor(props) {
     super(props);
     this.state = {
-      /*next image background*/
+      //next image background
       backgroundImage: bg1
     };
   }
@@ -42,5 +57,4 @@ class Landing extends Component {
       </div>
     );
   }
-}
-export default Landing;
+  */
