@@ -1,19 +1,24 @@
 import React, {Component} from 'react';
 
-import { Button, Jumbotron } from 'react-bootstrap'
+import { Jumbotron } from 'react-bootstrap'
 //import bg1 from '../assets/images/bg1.jpg';
 //import bg2 from '../assets/images/bg2.jpg';
+import RandomFood from './RandomFood';
+import AddFood from './AddFood'
 import '../assets/css/Landing.css';
+
 
 class Landing extends Component {
 
   render() {
     return (
-      <Jumbotron>
-        <h1>FudGods</h1>
-        <p>Pray to the gods of burgers and fries.</p>
-        <p><Button bsStyle="primary">Pray!</Button></p>
-      </Jumbotron>
+      <div className="container">
+        <Jumbotron>
+          <h1>FudGods</h1>
+          <p>Pray to the gods of burgers and fries.</p>
+        </Jumbotron>
+        <AddFood />
+      </div>  
     );
   }
 }
