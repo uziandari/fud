@@ -1,0 +1,19 @@
+.select button {
+  padding: 10px;
+  font-size: 16px;
+  margin: 10px;
+  background-color: #F25F5C;
+  color: #FFF;
+  border: 2px solid #F25F5C;
+}
+ 
+.select button:hover {
+  background-color: #F21B5C;
+  border: 2px solid #F21B5C;
+  cursor: pointer;
+}
+
+.select h3 {
+  color: #50514F;
+  font-size: 3em;
+}

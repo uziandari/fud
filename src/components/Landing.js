@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 import { Jumbotron } from 'react-bootstrap'
-//import bg1 from '../assets/images/bg1.jpg';
+import bg from '../assets/images/bg.jpg';
 //import bg2 from '../assets/images/bg2.jpg';
 import RandomFood from './RandomFood';
 import AddFood from './AddFood'
@@ -11,11 +11,30 @@ import '../assets/css/Landing.css';
 class Landing extends Component {
 
   render() {
+
+    const divStyle = {
+      color: '#fff',
+      fontFamily: 'Cabin',
+      fontWeight: '700',
+      fontSize: '7em'
+    };
+
+    const jumboStyle = {
+      backgroundImage: 'url(' + bg +')',
+      textAlign: 'center'
+    }
+
+    const subStyle = {
+      fontFamily: 'Railway',
+      fontSize: '3em',
+      color: '#fff'
+    }
+
     return (
-      <div className="container">
-        <Jumbotron>
-          <h1>FudGods</h1>
-          <p>Pray to the gods of burgers and fries.</p>
+      <div>
+        <Jumbotron style={jumboStyle}>
+          <h1 style={divStyle}>FudGods</h1>
+          <p style={subStyle}>Pray to the gods of burgers and fries.</p>
         </Jumbotron>
         <AddFood />
       </div>  

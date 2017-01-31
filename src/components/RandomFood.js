@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 
+import '../assets/css/randomfood.css';
+
 export default class RandomFood extends Component {
   constructor(props) {
     super(props);
     this.pickFood = this.pickFood.bind(this);
     this.state = {
       clicked: false,
-      food: ''
+      food: null
     }
   }
 
@@ -37,15 +39,12 @@ export default class RandomFood extends Component {
     const clicked = this.state.clicked;
     const food = this.state.food;
 
-    var godsText = `The gods have chosen: ${food}`;
-
-
     return (
-      <div className="col-md-2">
+      <div className="col-sm-6 select">
         <button onClick={this.pickFood}>{clicked ? 'Offer another Tribute' : 'Offer Tribute'}</button>
         <br />
         <br />
-        <h3>{food ? godsText : "" }</h3>
+        <h3>{food ? `The gods have chosen: ${food}` : "Don't anger the gods." }</h3>
       </div>
     );
 

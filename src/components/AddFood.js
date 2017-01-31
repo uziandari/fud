@@ -32,18 +32,22 @@ export default class AddFood extends Component {
 
   render() {
     return (
-      <div className="row">
-        <div className="col-md-6">
-          <div className="food-list">
-            <div className="header">
-              <form onSubmit={this.addPlace}>
-                <input ref={(a) => this._inputElement = a} placeholder="enter food"></input>
-                <button type="submit">add</button>
-              </form>
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-sm-6">
+            <div className="food-list">
+              <div className="header">
+                <form onSubmit={this.addPlace}>
+                  <input ref={(a) => this._inputElement = a} placeholder="enter food"></input>
+                  <button type="submit">add</button>
+                </form>
+              </div>
+              <FoodList entries={this.state.places} />
             </div>
-            <FoodList entries={this.state.places} />
-            <RandomFood entries={this.state.places} />
           </div>
+         
+          <RandomFood entries={this.state.places} />
+          
         </div>
       </div>
     );
